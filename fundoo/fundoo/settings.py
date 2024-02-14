@@ -103,13 +103,14 @@ CHANNEL_LAYERS = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'chatapp',
-        'USER': 'chatapp',
-        'PASSWORD': 'J.YqwX83zz',
-        'HOST': '10.0.8.71',
+        'NAME': os.environ.get('CHATDB'),
+        'USER': os.environ.get('CHATDBUSER'),
+        'PASSWORD': os.environ.get('CHATDBPASSWORD'),
+        'HOST': os.environ.get('CHATDBHOST'),
         'PORT': '3306',
     }
 }
+
 #sagar kadam
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
